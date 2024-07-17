@@ -1,6 +1,8 @@
 FROM alpine:3.7
 
-FROM rocker/r-ver:4.0.4
+FROM rocker/rstudio:4.0.1
+
+FROM rstudio/plumber:v1.0.0
 
 RUN apt-get update -qq && apt-get install -y \
   libssl-dev \
@@ -9,12 +11,12 @@ RUN apt-get update -qq && apt-get install -y \
   libxt-dev \
   libssl-dev
 
-RUN R -e "install.packages(c('dplyr', 'plumber', 'readr', 'stringr'))"
+RUN R -e "install.packages(c('dplyr','readr', 'plumber','stringr'),repos='http://cran.us.r-project.org/')"
 
 COPY . /app
 
 EXPOSE 8080
 
-WORKDIR /app/backend/code
+WORKDIR /app/code
 
 ENTRYPOINT ["Rscript", "runApi.R"]

@@ -1,8 +1,8 @@
 library(magrittr)
 library(plumber)
 
-# source('utils.R')
-# source('gmail.R')
+source('utils.R')
+#source('gmail.R')
 
 comments <- readr::read_csv('../../lda_data/data/comment_id.csv')
 
