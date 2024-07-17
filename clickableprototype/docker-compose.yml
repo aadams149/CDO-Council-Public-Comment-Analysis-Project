@@ -11,10 +11,10 @@ services:
     depends_on:
     - api
     restart: on-failure
-  backend:
-    build: "./backend"
-    ports:
-    - "5050:5050"
-    depends_on:
-    - api
+  #backend:
+  #  build: "./backend"
+  #  ports:
+  #  - "5050:5050"
+  #  depends_on:
+  #  - api
     #restart: on-failure

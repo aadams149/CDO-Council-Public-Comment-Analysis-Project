@@ -29,3 +29,4 @@ sendEmail <- function(sub, temp, userEmail, commentIds, userNotes){
   
   return("success")
 }
+

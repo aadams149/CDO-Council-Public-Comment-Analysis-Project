@@ -31,3 +31,4 @@ fillTemplate <- function(sme, user, temp){
 
 # test <- fillTemplate(fakeSme, fakeUser, 'test')
 # getSme('Data Engineering')
+ 

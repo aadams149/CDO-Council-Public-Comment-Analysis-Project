@@ -6,7 +6,11 @@
 !/lda_data/data/epa_usda_topics.rds
 !/lda_data/data/comment_id.csv
 !/dedup/data/**
+!/backend/data/**
 
 # Allow API Code
-!/backend/code/runApi.R
-!/backend/code/api.R
+#!/backend/code/runApi.R
+#!/backend/code/api.R
+#!/backend/code/utils.R
+#!/backend/code/gmail.R
+!/backend/code/**

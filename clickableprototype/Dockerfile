@@ -11,12 +11,12 @@ RUN apt-get update -qq && apt-get install -y \
   libxt-dev \
   libssl-dev
 
-RUN R -e "install.packages(c('dplyr','readr', 'plumber','stringr'),repos='http://cran.us.r-project.org/')"
-
 COPY . /app
 
 EXPOSE 8080
+  
+WORKDIR /app/backend/code
 
-WORKDIR /app/code
+RUN R -e "install.packages(c('dplyr','readr', 'plumber','stringr'),repos='http://cran.us.r-project.org/')"
 
 ENTRYPOINT ["Rscript", "runApi.R"]

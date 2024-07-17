@@ -1,8 +1,13 @@
 library(magrittr)
-library(plumber)
+#library(plumber)
 
-source('utils.R')
+#source('utils.R')
 #source('gmail.R')
+
+
+# test <- fillTemplate(fakeSme, fakeUser, 'test')
+# getSme('Data Engineering')
+ 
 
 comments <- readr::read_csv('../../lda_data/data/comment_id.csv')
 
